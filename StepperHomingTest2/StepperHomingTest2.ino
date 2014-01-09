@@ -20,13 +20,14 @@ void unhome() // If already homed then move away
     stepper1.setAcceleration(100.0);
     stepper1.runToNewPosition (-200);
   }
-  stepper1.setMaxSpeed(200);
-  stepper1.moveTo (10000);
-  stepper1.setSpeed(200); 
 }
 
 void home()
 {
+  stepper1.setMaxSpeed(200);
+  stepper1.moveTo (10000);
+  stepper1.setSpeed(200); 
+
   while (digitalRead(SensorPin) == 0)
   {
     stepper1.runSpeed();
