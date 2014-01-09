@@ -1,4 +1,3 @@
-
 #include <AccelStepper.h>
 #include <AFMotor.h>
 
@@ -10,7 +9,6 @@ const int TestLED = 13;
 AccelStepper stepper1( AccelStepper::FULL4WIRE,8,10,9,11);         
 
 void setup() {
-  digitalWrite(SensorEnable, HIGH); 
   delay(50); //let the sensor stabilise
   unhome();  
 }
